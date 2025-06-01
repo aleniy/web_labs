@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        html {
+            background-color: #ebe7dd;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-rows: auto auto 1fr;
+            grid-template-columns: 60% 40%;
+            /* column-gap: 30px;  */
+            padding: 20px;
+            background-color: #f9f3e7;
+            border-radius: 20px;
+        }
+
+        .title,
+        nav {
+            grid-column: 1 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            height: 72px;
+            background-color: #265780;
+            color: #f5f1e4;
+        }
+
+        nav {
+            background-color: #1d4666;
+            height: 50px;
+            margin-bottom: 10px;
+            color: #f5f1e4;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #f5f1e4;
+        }
+
+        .column-left {
+            grid-column: 1 / 2;
+        }
+
+        .column-right {
+            grid-column: 2 / 3;
+        }
+
+        hr.solid {
+            border: none;
+            border-top: 1px solid #888;
+            margin: 20px 0;
+        }
+
+        .popular {
+            background-color: #c3d7e0;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            border-radius: 20px;
+        }
+
+        .main img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .main {
+            padding-bottom: 10px;
+        }
+
+        .article {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding-bottom: 10px;
+        }
+
+        .article:nth-of-type(even) {
+            flex-direction: row-reverse;
+        }
+
+        .article img {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .article div {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .right-article {
+            /* background-color: #c3d7e0; */
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+        }
+
+        .right-article img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .action-button {
+            padding: 10px 20px;
+            background-color: #265780;
+            color: #f5f1e4;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .action-button:hover {
+            background-color: #1d4666;
+        }
+
+        .footer {
+            grid-column: 1 / 3;
+            text-align: center;
+            padding: 15px;
+            background-color: #1d4666;
+            color: #f5f1e4;
+            font-size: 14px;
+            margin-top: 20px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .search-input-wrapper {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .search-icon {
+            margin-right: 8px;
+            font-size: 16px;
+            color: #888;
+        }
+
+        .search-input {
+            border: none;
+            outline: none;
+            font-size: 14px;
+            flex-grow: 1;
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">NEWS WEBSITE</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">World</a>
+            <a href="#">Politics</a>
+            <a href="#">Business</a>
+        </nav>
+
+        <div class="column-left">
+            <div class="main">
+
+                <img src="https://as2.ftcdn.net/v2/jpg/05/17/53/57/1000_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg"
+                    alt="Main news image" />
+                <h2>Main</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. </p>
+            </div>
+            <hr class="solid">
+
+            <div class="article">
+                <img src="https://as2.ftcdn.net/v2/jpg/05/17/53/57/1000_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg"
+                    alt="World news" />
+
+                <div>
+                    <h2>World</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+
+            </div>
+            <hr class="solid">
+
+            <div class="article">
+                <img src="https://as2.ftcdn.net/v2/jpg/05/17/53/57/1000_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg"
+                    alt="Politics news" />
+                <div>
+                    <h2>Politics</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+
+            </div>
+            <hr class="solid">
+
+            <div class="article">
+                <img src="https://as2.ftcdn.net/v2/jpg/05/17/53/57/1000_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg"
+                    alt="Business news" />
+                <div>
+                    <h2>Business</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="column-right">
+
+            <div class="popular">
+                <div class="search">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input class="search-input" type="text" placeholder="Search..." />
+                    </div>
+                    <hr class="solid">
+                </div>
+                <h3>Popular</h3>
+                <ul>
+                    <li>Popular title</li>
+                    <li>Popular title</li>
+                    <li>Popular title</li>
+                </ul>
+            </div>
+
+            <div class="popular">
+                <h3>More Popular</h3>
+                <ul>
+                    <li>More popular title</li>
+                    <li>More popular title</li>
+                    <li>More popular title</li>
+                </ul>
+            </div>
+
+            <div class="right-article">
+                <img src="https://as2.ftcdn.net/v2/jpg/05/17/53/57/1000_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg"
+                    alt="Right column news" />
+                <h3>Special Report</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in
+                    voluptate.</p>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin: 10px;">
+                <button class="action-button">Read More</button>
+            </div>
+        </div>
+        <footer class="footer">
+            News Website, 2025
+        </footer>
+    </div>
+
+</body>
+
+</html>
